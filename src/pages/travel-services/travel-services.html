@@ -1,0 +1,98 @@
+<!--
+  Generated template for the TravelServicesPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Services</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-card>
+    <ion-card-content>
+      <ion-grid>
+        <ion-row>
+          <ion-col col-12>
+            <h2>TAXI</h2>
+            <p>Order a Taxi to Your current location</p>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-12 text-right>
+            <button ion-button class="btn-gra-primary" round small item-end (click)="presentTaxis()">
+              Order
+            </button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-content>
+      <ion-grid>
+        <ion-row>
+          <ion-col col-12>
+            <h2>HOTEL</h2>
+            <p>Book a Hotel room at your destination</p>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-12 text-right>
+            <button *ngIf="selectedHotel" ion-button outline color="green" item-start>
+              <ion-icon color="green" name="checkmark-circle-outline" item-start></ion-icon>
+              &nbsp;&nbsp;Reserved
+            </button>
+            <button ion-button class="btn-gra-primary" round small item-end (click)="presentHotels()">
+              Book
+            </button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
+
+
+    <ion-card>
+      <ion-card-content>
+        <ion-grid>
+          <ion-row>
+            <ion-col col-12>
+              <h2>AirHelp</h2>
+              <p>Report a misservice</p>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col col-12 text-right>
+              <button *ngIf="selectedAirhelp" ion-button outline color="green" item-start>
+                <ion-icon color="green" name="checkmark-circle-outline" item-start></ion-icon>
+                &nbsp;&nbsp;Reported
+              </button>
+              <button ion-button class="btn-gra-primary" round small item-end (click)="presentAirhelp()">
+                Book
+              </button>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-card-content>
+    </ion-card>
+
+  <ion-grid margin-top>
+    <ion-row>
+      <ion-col col-12>
+        <button ion-button class="btn-gra-green" round medium full (click)="finishTravel()">
+          Finish Travel
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+</ion-content>

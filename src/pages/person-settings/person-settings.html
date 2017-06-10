@@ -1,0 +1,57 @@
+<!--
+  Generated template for the PersonSettingsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>My information</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <form>
+    <ion-list>
+
+      <ion-item>
+        <ion-label stacked>Name</ion-label>
+        <ion-input name="user_name" [(ngModel)]="user_name" value="" type="text" placeholder="Your name"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label stacked>ICE</ion-label>
+        <ion-input name="user_ice" [(ngModel)]="user_ice" value="" type="text" placeholder="ICE phone number"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label stacked>Gender</ion-label>
+        <ion-select name="user_gender" [(ngModel)]="user_gender">
+          <ion-option value="m" checked="true">Male</ion-option>
+          <ion-option value="f">Female</ion-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <ion-label stacked>Nationality</ion-label>
+        <ion-select name="user_nationality" [(ngModel)]="user_nationality" >
+          <ion-option value="pl" checked="true">Polish</ion-option>
+          <ion-option value="en">English</ion-option>
+        </ion-select>
+      </ion-item>
+
+    </ion-list>
+  </form>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+          <button ion-button full class="btn-gra-green" round medium (click)="saveSettings()">Save settings</button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

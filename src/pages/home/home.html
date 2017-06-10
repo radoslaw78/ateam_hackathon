@@ -1,0 +1,44 @@
+<ion-header >
+  <ion-navbar class="btn-gra-primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-card *ngFor="let flight of flights" (click)="gotoTravelDetails()">
+    <ion-card-content>
+      <ion-grid>
+        <ion-row>
+          <ion-col col-5>
+            <h1>{{ flight.from.code}}</h1>
+            <p>{{ flight.from.name}}</p>
+          </ion-col>
+          <ion-col col-2>
+            <ion-icon style="font-size: 26px" name="plane"></ion-icon>
+          </ion-col>
+          <ion-col col-5>
+            <h1>{{ flight.to.code}}</h1>
+            <p>{{ flight.to.name}}</p>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-6><strong>Date:</strong></ion-col>
+          <ion-col col-6>{{flight.date + ' ' + flight.time}}</ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-grid margin-top>
+    <ion-row>
+      <ion-col col-12>
+        <button ion-button full class="btn-gra-primary" round medium margin-top (click)="setNewTravel()">Add new flight</button>
+        <button ion-button full class="btn-gra-danger" round medium margin-top (click)="showDisabilityCode()">DC</button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
