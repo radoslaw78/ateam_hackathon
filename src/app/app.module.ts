@@ -33,6 +33,7 @@ import { ModalTaxiPage } from '../pages/modal-taxi/modal-taxi';
 import { ModalAirhelpPage } from '../pages/modal-airhelp/modal-airhelp';
 
 import { AirportMapPage } from '../pages/airport-map/airport-map';
+import { ModalDcodesPage } from '../pages/modal-dcodes/modal-dcodes';
 /**
  * Providers
  */
@@ -65,7 +66,8 @@ export function provideSettings(storage: Storage) {
     ModalHotelsPage,
     ModalTaxiPage,
     ModalAirhelpPage,
-    AirportMapPage
+    AirportMapPage,
+    ModalDcodesPage
   ],
   imports: [
     BrowserModule,
@@ -87,7 +89,8 @@ export function provideSettings(storage: Storage) {
     ModalHotelsPage,
     ModalTaxiPage,
     ModalAirhelpPage,
-    AirportMapPage
+    AirportMapPage,
+    ModalDcodesPage
   ],
   providers: [
     StatusBar,

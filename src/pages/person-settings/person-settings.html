@@ -20,17 +20,17 @@
 
       <ion-item>
         <ion-label stacked>Name</ion-label>
-        <ion-input name="user_name" [(ngModel)]="user_name" value="" type="text" placeholder="Your name"></ion-input>
+        <ion-input [(ngModel)]="form.user_name" [ngModelOptions]="{standalone: true}" value="" type="text" placeholder="Your name"></ion-input>
       </ion-item>
 
       <ion-item>
         <ion-label stacked>ICE</ion-label>
-        <ion-input name="user_ice" [(ngModel)]="user_ice" value="" type="text" placeholder="ICE phone number"></ion-input>
+        <ion-input [(ngModel)]="form.user_ice" [ngModelOptions]="{standalone: true}" value="" type="text" placeholder="ICE phone number"></ion-input>
       </ion-item>
 
       <ion-item>
         <ion-label stacked>Gender</ion-label>
-        <ion-select name="user_gender" [(ngModel)]="user_gender">
+        <ion-select [(ngModel)]="form.user_gender" [ngModelOptions]="{standalone: true}">
           <ion-option value="m" checked="true">Male</ion-option>
           <ion-option value="f">Female</ion-option>
         </ion-select>
@@ -38,10 +38,15 @@
 
       <ion-item>
         <ion-label stacked>Nationality</ion-label>
-        <ion-select name="user_nationality" [(ngModel)]="user_nationality" >
+        <ion-select [(ngModel)]="form.user_nationality" [ngModelOptions]="{standalone: true}">
           <ion-option value="pl" checked="true">Polish</ion-option>
           <ion-option value="en">English</ion-option>
         </ion-select>
+      </ion-item>
+
+      <ion-item margin-top>
+        <ion-label>Disability Codes</ion-label>
+        <button ion-button outline small color="primary" item-end (click)="openModalDcodes()">Choose</button>
       </ion-item>
 
     </ion-list>

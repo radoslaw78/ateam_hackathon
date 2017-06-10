@@ -32,7 +32,7 @@ export class MyApp {
     this.pages = [
       { title: 'Dashboard', icon: 'home', component: HomePage },
       { title: 'New Travel', icon: 'plane', component: NewTravelPage },
-      { title: 'My informations', icon: 'person', component: PersonSettingsPage },
+      { title: 'My information', icon: 'person', component: PersonSettingsPage },
       { title: 'App settings', icon: 'settings', component: AppSettingsPage }
     ];
 

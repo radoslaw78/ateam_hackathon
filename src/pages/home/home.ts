@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, NavParams } from 'ionic-angular';
 
 import { NewTravelPage } from '../new-travel/new-travel';
 import { DcPage } from '../dc/dc';
@@ -13,14 +13,18 @@ export class HomePage {
 
   flights : Array<any>;
 
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController, public navPam: NavParams) {
     this.flights = [
       {
         from: { code: "GDN", name: "Gdańsk Rębiechowo" },
         to: { code: "STM", name: "London Stansted" },
         date: "2017-06-12", time: "16:50"
       }
-    ]
+    ];
+
+    if ( typeof this.navPam.get('date') !== 'undefined') {
+      this.flights.push(this.navPam.data);
+    };
   }
 
   gotoTravelDetails() {

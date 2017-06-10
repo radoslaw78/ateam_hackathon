@@ -5,6 +5,7 @@ import { ModalController } from 'ionic-angular';
 import { ModalHotelsPage } from '../modal-hotels/modal-hotels';
 import { ModalTaxiPage} from '../modal-taxi/modal-taxi';
 import { ModalAirhelpPage} from '../modal-airhelp/modal-airhelp';
+import { ToastController } from 'ionic-angular';
 /**
  * Generated class for the TravelServicesPage page.
  *
@@ -24,7 +25,8 @@ export class TravelServicesPage {
     public navCtrl: NavController,
     public navParams: NavParams,
     public loadingCtrl: LoadingController,
-    public modalCtrl: ModalController) {
+    public modalCtrl: ModalController,
+  public toast: ToastController) {
   }
 
   ionViewDidLoad() {
@@ -88,6 +90,20 @@ presentAirhelp() {
     loader.dismiss();
     modal.present();
   }, 1000);
+}
+
+finishTravel() {
+
+  let toast = this.toast.create({
+      message: 'User was added successfully',
+      duration: 3000
+    });
+    toast.present();
+
+    setTimeout( () => {
+      toast.dismiss();
+      this.navCtrl.popToRoot();
+    }, 1000);
 }
 
 }
