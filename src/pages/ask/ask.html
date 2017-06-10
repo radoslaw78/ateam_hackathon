@@ -1,0 +1,26 @@
+<!--
+  Generated template for the AskPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Help page</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+    <ion-item *ngFor="let ask of asks">
+      <ion-thumbnail item-start>
+        <img [src]="ask.icon">
+      </ion-thumbnail>
+      <h2>{{ask.text}}</h2>
+      <button ion-button clear item-end></button>
+    </ion-item>
+  </ion-list>
+</ion-content>

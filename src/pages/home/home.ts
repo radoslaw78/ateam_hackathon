@@ -4,6 +4,7 @@ import { NavController, NavParams } from 'ionic-angular';
 import { NewTravelPage } from '../new-travel/new-travel';
 import { DcPage } from '../dc/dc';
 import { TravelDetailsPage } from '../travel-details/travel-details';
+import { AskPage } from '../ask/ask';
 
 @Component({
   selector: 'page-home',
@@ -37,6 +38,10 @@ export class HomePage {
 
   showDisabilityCode() {
     this.navCtrl.push(DcPage);
+  }
+
+  showAskPage() {
+    this.navCtrl.push(AskPage);
   }
 
 
